@@ -1,0 +1,248 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("../imgs/test.jpeg");
+    background-color: burlywood;
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center; /* Parallax effect */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 32px;
+    line-height: 1;
+    border: #49311d solid 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline;
+    padding-right: 20px;
+}
+
+nav{
+    background-color: #49311d;
+    padding: 25px 0px;   
+    text-align: right;   
+    font-family: 'Century Gothic';
+}
+
+header p{
+    color: white;
+    margin: 10px;
+    padding: 10px; 
+    background-color: #49311d;
+    text-align: center;
+    border: white solid 10px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #49311d;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Century Gothic';
+    margin-top: 10px;
+}
+
+nav a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    border: 2px dotted;
+    text-transform: uppercase;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    color: blue;
+}
+
+.skip a:focus{
+    position: absolute;
+    top: 0px;
+}
+
+*:focus {
+    border: 2px solid;
+}
+
+header{
+    color: #49311d;
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    font-family: 'Century Gothic';
+    background-color: #c8af93;
+    margin: 10px;
+    border-radius: 10px;
+    border: 10px solid white;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 25px;
+    text-align: center;
+    margin: 10px;
+  }
+
+
+.gallery-item {
+    width:100%;
+    height: 100%;
+    position: relative;
+    border: 10px solid white;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #c8af93;
+}
+
+.gallery-item:hover .image img {
+    opacity: 0%;
+}
+
+.gallery-item .text {
+    opacity:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    pointer-events: none;
+    z-index:4;
+    font-size: 40px;
+    font-family: 'Century Gothic';  
+}
+
+.gallery-item .text p {
+    font-size: 15px;
+    padding: 10px;
+}
+
+.gallery-item:hover .text {
+    opacity: 1;
+    width:100%;
+}
+
+.container3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.history, .history1, .history2 {
+    color: #49311d;
+    margin: 0px 10px;
+    padding: 10px; 
+    background-color: #c8af93;;
+    text-align: center;
+    border: white solid 10px;
+    border-radius: 10px;
+}
+
+.history{
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+}
+.history1 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1;
+}
+
+.history2 {
+    grid-row: 3 / span 1;
+    grid-column: 1 / -1;
+}
+
+.history img, .history1 img, .history2 img {
+    max-height: 700px;
+    border: 10px solid white;
+    border-radius: 10px;
+}
+
+.history p, .history1 p, .history2 p {
+    padding: 10px
+}
+
+.products, .products1, .products2, .products3, .products4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    align-items: stretch;
+    font-size: 22px;
+    font-weight: bolder;
+    font-family: 'Century Gothic';
+    border: 10px solid #c8af93;
+    border-radius: 10px;
+}
+
+.products a, .products1 a, .products2 a, .products3 a, .products4 a {
+    font-size: 16px;
+    padding: 10px 0px 20px 0px;
+}
+
+.product-images{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.health, .negative-effects {
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    margin: 10px;
+}
+
+.benefits, .negative {
+    background-color: white;
+    border: 10px solid #c8af93;
+    border-radius: 10px;
+    font-family: 'Century Gothic';
+    margin: 10px;
+    font-size: 10px;
+}
+
+.benefits ol, .negative ol {
+    margin: 5px 25px;
+}
+
+.benefits p, .negative p {
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 5px;
+}
