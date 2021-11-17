@@ -72,10 +72,14 @@ nav a{
     font-family: 'Patrick Hand', 'Century Gothic','Gill Sans';
 }
 
-nav a:hover {
-    text-decoration: underline;
-    border: 2px dotted;
+.active, nav a:hover {
+    color: #c8af93;
+  }
+
+nav a.current {
+    color: #c8af93;
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .skip a{
@@ -259,6 +263,28 @@ object {
     margin: 5px;
 }
 
+.infograph img {
+    border: 10px solid #c8af93;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.max-benefits {
+    background-color: white;
+    border: 10px solid #c8af93;
+    border-radius: 10px;
+    font-family:'Patrick Hand','Century Gothic', 'Gill Sans';
+    margin: 20px;
+    font-size: 10px;
+}
+
+.max-benefits p {
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 5px;
+}
+
 @media screen and (min-width: 700px){
     h1{
         font-size: 90px;
@@ -330,5 +356,15 @@ object {
 
     nav ul {
         display: inline-flex;
+    }
+
+    .infograph img {
+        max-width: 95%;
+        display: block;
+        margin: 20px auto 20px auto;
+    }
+    
+    .max-benefits p {
+        font-size: 24px;
     }
 }
