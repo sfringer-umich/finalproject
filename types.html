@@ -9,18 +9,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century+Gothic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Types of Coffee</title>
 </head>
 <body>
+
+    <div class="loader-wrapper">
+        <span class="cup">
+            <div class="handle"></div>
+        </span>
+    </div>
+
+    <script>
+        $(window).on("load", function(){
+            $(".loader-wrapper").delay(2400).fadeOut("slow");
+        });
+    </script>
+
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <nav coffee> Let's Learn A Latte!
+    <nav coffee> 
+        <p>Let's Learn A Latte!</p>
         <ul>
             <li><a href = "history.html">History</a></li> 
             <li><a class="current" href = "types.html">Types</a></li>
             <li><a href = "products.html">Products</a></li>
             <li><a href = "nutrition.html">Nutrition</a></li>
+            <li><a href = "form.html">Feedback</a></li>
         </ul>
     </nav>
+
 	<main class="container">
         <header id="main">
             <h1>Coffee Drinks</h1>
@@ -29,9 +46,9 @@
 
     <div class="types-container">
         <div class="gallery-container">
-            <div class="gallery-item">
-                <div class="image">
-                    <img src="imgs/americano_cartoon.png" alt="Americano">
+            <div class="gallery-item" tabindex="0">
+                <div class="image" >
+                    <img src="imgs/americano_cartoon.png" alt="This is an illustration of an Americano beverage.">
                 </div>
                 <div class="text">
                     <h2>AMERICANO</h2>
@@ -41,9 +58,9 @@
         </div>
          
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/frapp.png" alt="Frapp">
+                    <img src="imgs/frapp.png" alt="This is an illustration of a Frappacino beverage.">
                 </div>
                 <div class="text">
                     <h2>FRAPPUCCINO</h2>
@@ -53,9 +70,9 @@
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/cappuccino.png" alt="CAPPUCCINO">
+                    <img src="imgs/cappuccino.png" alt="This is an illustration of a CAPPUCCINO beverage.">
                 </div>
                 <div class="text">
                     <h2>CAPPUCCINO</h2>
@@ -65,9 +82,9 @@
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/caramel_machiatto.png" alt="CARAMEL MACCHIATO">
+                    <img src="imgs/caramel_machiatto.png" alt="This is an illustration of a CARAMEL MACCHIATO beverage.">
                 </div>
                 <div class="text">
                     <h2>CARAMEL MACCHIATO</h2>
@@ -77,21 +94,21 @@
         </div>
          
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/latte.png" alt="Latte">
+                    <img src="imgs/latte.png" alt="This is an illustration of a Latte beverage.">
                 </div>
                 <div class="text">
-                    <h2>LATTE</h2>
+                    <h2 class="latte">LATTE</h2>
                         <p>A Latte is one of the most popular coffee beverages consumed in the United States each day! Of the 400 million cups of coffee consumed in the US, alone, millions are variatsn of a Latte. A Latte is essentially created by mixing espresso with milk, tradtionally a combination of steamed milk and a layer of foam. A Latte is very similar to a Cappuccino but has more steamed milk and less milk foam. This drink can be served either hot or cold and can include different flavored syrups, whipped cream, or even sugar and spice! This is a go-to drink for many coffee drinkers out there, you will not be dissapointed!</p>
                 </div>
             </div>
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/irish.png" alt="Irish Coffee">
+                    <img src="imgs/irish.png" alt="This is an illustration of an Irish Coffee beverage.">
                 </div>
                 <div class="text">
                     <h2>IRISH COFFEE</h2>
@@ -101,9 +118,9 @@
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/plain.png" alt="Plain Coffee">
+                    <img src="imgs/plain.png" alt="This is an illustration of a Plain Coffee.">
                 </div>
                 <div class="text">
                     <h2>PLAIN COFFEE</h2>
@@ -113,9 +130,9 @@
         </div>
          
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/espresso.png" alt="Espresso">
+                    <img src="imgs/espresso.png" alt="This is an illustration of an Espresso.">
                 </div>
                 <div class="text">
                     <h2>ESPRESSO</h2>
@@ -125,9 +142,9 @@
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" tabindex="0">
                 <div class="image">
-                    <img src="imgs/mocha.png" alt="Cafe Mocha">
+                    <img src="imgs/mocha.png" alt="This is an illustration of a Cafe Mocha.">
                 </div>
                 <div class="text">
                     <h2>CAFE MOCHA</h2>

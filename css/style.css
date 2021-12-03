@@ -4,14 +4,78 @@ html{
 }
 
 body{
-    background-image: url("../imgs/test.jpeg");
-    background-color: burlywood;
+    background-image: url("../imgs/background_image.png");
+    background-color: #c8af93;
     background-attachment: fixed; /* Parallax effect */
     background-position: center; /* Parallax effect */
-    background-repeat: no-repeat;
-    background-size: cover; 
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover; /* Parallax effect */
     margin: 0;
     padding: 0;
+}
+
+.loader-wrapper{
+    background-color: #c8af93;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cup {
+    margin: auto;
+    display: inline-block;
+    height: 140px;
+    width: 180px;
+    position: relative;
+    border: 6px solid transparent;
+    border-radius: 0px 0px 70px 70px;
+    background: url(../imgs/coffee_loader.png);
+    background-position: 0px 140px;
+    background-repeat: repeat-x;
+    box-shadow: 0px 0px 0px 6px white;
+    animation: fill 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fill {
+    0% {
+        background-position: 0px 140px;
+    }
+
+    20% {
+        background-position: -450px 100px;
+    }
+
+    40% {
+        background-position: -900px 50px;
+    }
+
+    80% {
+        background-position: -1350px -40px;
+    }
+
+    100% {
+        background-position: 140px -40px;
+    }
+}
+
+.handle{
+    height: 70px;
+    width: 40px;
+    background-color: transparent;
+    border: 6px solid white;
+    position: relative;
+    left: 180px;
+    top: -5px;
+    border-radius: 0px 25px 80px 0px;
 }
 
 h1{
@@ -23,6 +87,7 @@ h1{
     background-color: white;
     text-transform: uppercase;
     margin: 20px;
+    padding: 10px 5px;
 }
 
 nav ul{
@@ -53,17 +118,6 @@ header p{
     border-radius: 10px;
 }
 
-footer{
-    background-color: #49311d;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    font-family: 'Patrick Hand','Century Gothic','Gill Sans';
-    margin-top: 10px;
-    bottom: 0px;
-    width: 100%;
-}
-
 nav a{
     color: white;
     font-weight: bold;
@@ -84,6 +138,7 @@ nav a.current {
 
 .skip a{
     background: white;
+    font-family: 'Patrick Hand', 'Century Gothic','Gill Sans';
     left: 0;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
@@ -91,7 +146,7 @@ nav a.current {
     z-index: 1;
     position: absolute;
     top: -40px;
-    color: blue;
+    color: #c8af93;
 }
 
 .skip a:focus{
@@ -123,8 +178,16 @@ header{
     margin: 20px;
   }
 
+@keyframes showGallery {
+    from {opacity: 0;}
+    to {opacity: 1; }
+}
 
 .gallery-item {
+    opacity: 0;
+    animation-name: showGallery;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
     width:100%;
     height: 100%;
     position: relative;
@@ -132,10 +195,11 @@ header{
     border-radius: 10px;
     padding: 25px;
     background-color: #c8af93;
+    overflow: scroll;
 }
 
-.gallery-item:hover .image img {
-    opacity: 0%;
+.gallery-item:focus .image img {
+    opacity: 0;
 }
 
 .gallery-item .text {
@@ -145,18 +209,22 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    pointer-events: none;
     z-index:4;
     font-size: 40px;
     font-family: 'Patrick Hand','Century Gothic','Gill Sans'; 
 }
 
 .gallery-item .text p {
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px;
 }
 
-.gallery-item:hover .text {
+.gallery-item .text h2 {
+    font-size: 34px;
+    padding-top: 20px;
+}
+
+.gallery-item:focus .text {
     opacity: 1;
     width:100%;
 }
@@ -235,13 +303,12 @@ header{
     text-align: center;
 }
 
-object {
-    margin: 10px;
-    width: 340px;
-    height: 215px;
+iframe {
+    margin: 20px;
+    width: 88%;
+    height: 280px;
     border: 2px solid white;
     border-radius: 10px;
-    
 }
 
 .benefits, .negative {
@@ -250,7 +317,7 @@ object {
     border-radius: 10px;
     font-family:'Patrick Hand','Century Gothic', 'Gill Sans';
     margin: 20px;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .benefits ol, .negative ol {
@@ -258,7 +325,7 @@ object {
 }
 
 .benefits p, .negative p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     margin: 5px;
 }
@@ -268,6 +335,7 @@ object {
     margin: 20px;
     border-radius: 10px;
     max-width: 90%;
+    height:92%;
 }
 
 .max-benefits {
@@ -277,12 +345,148 @@ object {
     font-family:'Patrick Hand','Century Gothic', 'Gill Sans';
     margin: 20px;
     font-size: 10px;
+    overflow-y: auto; 
 }
 
 .max-benefits p {
+    background-color: white;
     font-size: 16px;
     font-weight: bolder;
     margin: 5px;
+    padding: 10px;
+}
+
+@keyframes animation {
+    from {transform: rotate(-360deg); color: #c8af93;}
+    to {transform: rotate(0deg); color: white; }
+}
+  
+nav p {
+    color: #c8af93;
+    animation-name: animation;
+    animation-delay: 3s;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+p.nutrition_page {
+    animation-delay: 5s;
+}
+
+
+form {
+    display: block;
+    color: white;
+    margin: 20px;
+    padding: 10px; 
+    background-color: #c8af93;
+    text-align: center;
+    border: white solid 10px;
+    border-radius: 10px;
+    font-family: 'Patrick Hand','Century Gothic','Gill Sans';
+  }
+
+h3 { 
+    text-transform: uppercase;
+    text-align: center;
+    border: #49311d solid 10px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px;
+    font-size: 30px;
+    color: #49311d
+}
+
+.form-container {
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    background-color: #49311d;
+    text-align: center;
+    border: white solid 10px;
+    border-radius: 10px;
+}
+
+label{
+    display: inline-block;
+    margin-right:10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand','Century Gothic','Gill Sans';
+}
+
+span{
+    margin-left:20%;
+    font-family: italic;
+    font-weight: bold;
+}
+  
+textarea {
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand','Century Gothic','Gill Sans';
+}
+
+input[type=checkbox]{
+    display:inline;
+    width:inherit;
+}
+
+input[type=submit] {
+  background-color: #c8af93;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Patrick Hand','Century Gothic','Gill Sans';
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+footer{
+    background-color: #49311d;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Patrick Hand','Century Gothic','Gill Sans';
+    margin-top: 10px;
+    bottom: 0px;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav p {
+        animation: none;
+        opacity: 1;
+    }
+
+    .cup {
+        animation: none;
+        background: url(../imgs/coffee_loader.png);
+        background-position: 140px -8px;
+        opacity: 1;
+    }
+
+    body {
+        background-attachment: initial;
+      }
 }
 
 @media screen and (min-width: 700px){
@@ -290,8 +494,16 @@ object {
         font-size: 90px;
     }
 
+    h3 {
+        font-size: 56px;
+    }
+
     header p{
         font-size: 24px;
+    }
+
+    .form-container {
+        font-size: 20px;
     }
 
     .types-container{
@@ -306,14 +518,52 @@ object {
     }
 
     
-    object {
-        width: 90%;
+    iframe {
+        height: 510px;
+        width: 100%;
     }
 
     .benefits, .negative {
         font-size: 24px;
         margin: 20px;
         padding-left: 15px;
+    }
+
+    .health {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .benefits {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .negative {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .negative-effects {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .max-benefits {
+        grid-column:2;
+        grid-row:3;
+    }
+
+    .infograph {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 10px;
+        width: 105%;
+    }
+
+    .max-benefits {
+        grid-column: 2;
+        grid-row: 3;
     }
 
     .benefits p, .negative p {
@@ -345,7 +595,7 @@ object {
     nav {
         display: flex;
         justify-content: space-between;
-        font-size: 60px;
+        font-size: 52px;
         padding: 10px 10px;
         align-items: center;
     }
@@ -359,7 +609,7 @@ object {
     }
 
     .infograph img {
-        max-width: 96%;
+        max-width: 95%;
         display: block;
         margin: 20px auto 20px auto;
     }
@@ -367,4 +617,69 @@ object {
     .max-benefits p {
         font-size: 24px;
     }
+
+    .nutrition_container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,550px);
+        column-gap: 30px;
+    }
+
+    .gallery-item .text h2 {
+        font-size: 48px;
+    }
+
+    .gallery-item .text p {
+        font-size: 18px;
+    }
+
+    .gallery-item .text h2.latte {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1080px){
+
+    h1 {
+        font-size: 80px;
+    }
+
+    nav {
+        display: flex;
+        font-size: 60px;
+        padding: 10px 10px;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    nav p {
+        font-size: 90px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav li{
+        margin: 0px 10px;
+    }
+
+    .history-container {
+        display: flex;
+    }
+
+    .history, .history1, .history2{
+        flex-basis: 100%;
+        overflow: scroll;
+    }
+
+    .history img, .history1 img, .history2 img{
+        min-height: 25%;
+    }
+
+    .types-container {
+        justify-content: space-between;
+    }
+
 }

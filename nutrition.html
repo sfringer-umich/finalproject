@@ -9,26 +9,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century+Gothic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Coffee & Health</title>
 </head>
 <body>
+
+    <div class="loader-wrapper">
+        <span class="cup">
+            <div class="handle"></div>
+        </span>
+    </div>
+
+    <script>
+        $(window).on("load", function(){
+            $(".loader-wrapper").delay(2500).fadeOut("slow");
+        });
+    </script>
+
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <nav coffee> Let's Learn A Latte!
+    <nav coffee>
+        <p class="nutrition_page">Let's Learn A Latte!</p>
         <ul>
             <li><a href = "history.html">History</a></li> 
             <li><a href = "types.html">Types</a></li>
             <li><a href = "products.html">Products</a></li>
-            <li><a class="current" href = "nutrition.html">Health</a></li>
+            <li><a class="current" href = "nutrition.html">Nutrition</a></li>
+            <li><a href = "form.html">Feedback</a></li>
         </ul>
     </nav>
 
+    <header id="main">
+        <h1>How Does Coffee Affect Health?</h1>
+    </header>
+
 	<main class="nutrition_container">
-        <header id="main">
-            <h1>How Does Coffee Affect Health?</h1>
-        </header>
 
         <div class='health'>
-            <object data="https://www.youtube.com/embed/EZaS2TpWLTA?hl=en&cc_lang_pref=en&cc=1" title="6 ways coffee benefits your health video"></object>
+            <iframe src="https://www.youtube.com/embed/EZaS2TpWLTA?hl=en&cc_lang_pref=en&cc=1" title="6 ways coffee benefits your health video" allowfullscreen></iframe> 
         </div>
 
         <div class='benefits'>
@@ -45,8 +62,7 @@
         </div>
 
         <div class='negative-effects'>
-            <object data="https://www.youtube.com/embed/OvDuBVBoV3Q?hl=en&cc_lang_pref=en&cc=1" title="Can coffee have negative effects video"></object> 
-            
+            <iframe src="https://www.youtube.com/embed/OvDuBVBoV3Q?hl=en&cc_lang_pref=en&cc=1" title="Can coffee have negative effects video" allowfullscreen></iframe> 
         </div>
 
         <div class='negative'>
@@ -62,10 +78,10 @@
         </div>
 
         <div class='infograph'>
-            <img src="imgs/infograph.png" alt="InfoGraphic">
+            <img src="imgs/infograph.png" alt="This is an InfoGraphic image that shows the benefits and health concerns of coffee.">
         </div>
 
-        <div class = "max-benefits">
+        <div class = "max-benefits" tabindex="0">
             <p>Above, you have now seen the pros and the cons of drinking coffee, outlined in a video, text, and infographic format. As we can see, there are definitely more pros than cons. Although, we definitely cannot ignore or discard these cons completely, just because there are more pros. Therefore, the next question to ask is how can we get make these cons less severe and maximum our benefits from drinking coffee? To begin, one should opt for whole coffee beans and grind them just before you are about to brew your cup of joe. Additionally, black coffee is recommended if you want to experience the most benefits and eliminate the sugar and chemical overload from creamers and sugar. Next, if possible, use organic coffee beans that are pesticide-free since these are often among the most less-sprayed crops in existence. The best way to find beans that are free of chemicals are to look for ones that are 100% organic seal or by visiting a local coffee farm and buying directly from there.</p>
         </div>
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="imgs/coffee_cup.png">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century+Gothic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Feedback</title>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <span class="cup">
+            <div class="handle"></div>
+        </span>
+    </div>
+
+    <script>
+        $(window).on("load", function(){
+            $(".loader-wrapper").delay(2400).fadeOut("slow");
+        });
+    </script>    
+
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <nav coffee>
+        <p>Let's Learn A Latte!</p>
+        <ul>
+            <li><a href = "history.html">History</a></li> 
+            <li><a href = "types.html">Types</a></li>
+            <li><a href = "products.html">Products</a></li>
+            <li><a href = "nutrition.html">Nutrition</a></li>
+            <li><a class="current" href = "form.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+	<main class="container">
+        <header id="main">
+            <h1>Espresso Yourself!</h1>
+                <p> Thank you for visiting my website! Coffee is the most importance meal of the day and your feedback is the second. In the form below, please leave your thoughts and opinions of my site and what your favorite part was! I would love to hear what you believe I could improve upon to make this website even more BREWtiful! Thanks a Latte!  </p>
+        </header>
+
+     <form action="https://formspree.io/f/xayvwbqp" method="POST">
+      <fieldset>
+        <h3>Feedback Form</h3>
+        
+        <div class='form-container'>
+            <label for="name_id">Your Name</label>
+            <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+        
+            <label for="email_id">Your Email</label>
+            <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+        
+            <label for="phone_id">Your Phone Number: (123-456-7890)</label>
+            <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        
+            <label for="msg">Leave A Message</label>
+            <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+        
+            <input type="checkbox" checked="checked" name="remember" id = "cBox"> 
+            <label for ="cBox">Remember me</label>
+        
+            <input type="submit" value = "Submit">
+        </div>
+      </fieldset>
+     </form>
+
+    </main>
+
+	<footer>
+		<p>Sarah Fringer: SI 539 Final Project &copy; 2020</p>
+	</footer>
+    
+</body>
+</html>
